@@ -2,11 +2,10 @@
 <html lang="es">
 
     <head> 
-        <meta charset="es">
+        <meta charset="UTF-8">
         <title> Layoud con fload </title>
-       <link
-             href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-   
+       <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+            <meta name="viewport" content="width=device-width">
         <style>
             *{
                 box-sizing: border-box
@@ -27,17 +26,15 @@
                  text-align: center;
                  color: white
             }
+             nav{
+                 background: pink;
+            }
              section{
                 background:yellow;
             }
-             nav{
-                background:gray;
-                 float: left;
-                 width: 30%;
-            }
+            
             .contenedor{
-              float: left;
-                width: 60%;
+              display: block;
             }
              article{
                 background:pink;
@@ -57,6 +54,31 @@
                 clear: both;
             }
             
+            @media screen and (min-witdth:768px) {
+                /*aqui inician los estilos de tablet*/
+                nav{
+                    float:left;
+                    width:30%;
+                }
+                .contenedor{
+                    float:left;
+                    width: 65%;
+                        
+                }
+                 /*aqui terminan los estilos de tablet*/
+            }
+                
+             @media screen and (min-witdth:1024px) {
+                /*aqui inician los estilos de laptop*/
+                 .contenedor{
+                    width: 66%;
+                       }
+                 h1 {
+                         font-size: 48px;
+                     }
+                 /*aqui terminan los estilos de laptop*/
+            }
+                
         </style>
     </head>
 <header>
