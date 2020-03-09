@@ -3,7 +3,7 @@
 
     <head> 
         <meta charset="UTF-8">
-        <title> Layoud con fload </title>
+        <title> Layoud con inline-block </title>
        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
             <meta name="viewport" content="width=device-width">
         <style>
@@ -60,14 +60,15 @@
             @media screen and (min-width:768px) {
                 /*aqui inician los estilos de tablet*/
                 nav{
-                    float:left;
+                    display:inline-block;
+                    vertical-align: top;
                     width:30%;
                 }
                 .contenedor{
-                    float:left;
-                    width: 65%;
-                        
-                }
+                    display:inline-block;
+                    vertical-align: top;
+                    width:65%;
+                    }
                  /*aqui terminan los estilos de tablet*/
             }
                 
@@ -85,9 +86,9 @@
         </style>
     </head>
 <header>
-    <h1>Estructura con posición fload</h1>
+    <h1>Estructura con inline-block</h1>
     </header>
-    <section class="clearfix">
+    <section>
         <nav> 
             <ul>
             <li> Inicio </li>
@@ -118,7 +119,7 @@
         </article>
 </div>
              </section>
-<footer class="after-box">
+<footer>
     © 2020 Todos los derechos recervados
     </footer>
 </html>   
