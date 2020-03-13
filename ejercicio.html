@@ -3,7 +3,7 @@
 
     <head> 
         <meta charset="UTF-8">
-        <title> Layoud con inline-block </title>
+        <title> flexbox </title>
        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
             <meta name="viewport" content="width=device-width">
         <style>
@@ -11,7 +11,7 @@
                 box-sizing: border-box
             }
             body{
-                background:green;
+                background:purple;
                 margin: 0;
                 padding: 0;
                 font-family: 'Montserrat';
@@ -22,25 +22,32 @@
                                     display: block;
             }
              header{
-                background:gray;
+                background:black;
                  text-align: center;
                  color: white
             }
             h1{
                 transition: all 1s ease-in-out;
             }
+            p{
+                color: aliceblue;
+            }
+            h2 {
+                color: antiquewhite;
+            }
              nav{
-                 background: pink;
+                 background: black;
+                 color:white;
             }
              section{
-                background:yellow;
+                background:black;
             }
             
             .contenedor{
               display: block;
             }
              article{
-                background:pink;
+                background:black;
               
             }
             footer{
@@ -53,23 +60,24 @@
 
             @media screen and (min-width:768px) {
                 /*aqui inician los estilos de tablet*/
+                section{  
+                    display: flex;  
+                }
+                
                 nav{
-                    display:inline-block;
-                    vertical-align: top;
-                    width:30%;
+                    width:200px;
+                    min-width:100px;
                 }
                 .contenedor{
-                    display:inline-block;
-                    vertical-align: top;
-                    width:65%;
+                   flex: 1;
                     }
                  /*aqui terminan los estilos de tablet*/
             }
                 
              @media screen and (min-width:1024px) {
                 /*aqui inician los estilos de laptop*/
-                 .contenedor{
-                    width: 66%;
+                 nav{
+                    width: 300px;
                        }
                  h1 {
                          font-size: 48px;
@@ -80,7 +88,7 @@
         </style>
     </head>
 <header>
-    <h1>Estructura con inline-block</h1>
+    <h1> Layout con flexbox</h1>
     </header>
     <section>
         <nav> 
