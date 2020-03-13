@@ -3,9 +3,10 @@
 
     <head> 
         <meta charset="UTF-8">
-        <title> flexbox </title>
+        <title> Layoud con flexbox grid </title>
        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
             <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="flexboxgrid.css">
         <style>
             *{
                 box-sizing: border-box
@@ -15,70 +16,51 @@
                 margin: 0;
                 padding: 0;
                 font-family: 'Montserrat';
+                color: white;
             }
-            header,section,nav,article,footer{
-                                    padding: 15px;
-                                    margin:15px;
-                                    display: block;
-            }
-             header{
+        header{
                 background:black;
                  text-align: center;
-                 color: white
+                 color: white;
+                 padding: 2em 0;
             }
             h1{
                 transition: all 1s ease-in-out;
             }
             p{
-                color: aliceblue;
+                color: white;
             }
             h2 {
-                color: antiquewhite;
+                color: white;
             }
              nav{
                  background: black;
                  color:white;
             }
              section{
-                background:black;
+                background:white;
             }
             
-            .contenedor{
-              display: block;
-            }
              article{
                 background:black;
+                 padding: 1em;
+                 margin: 1em;
               
             }
             footer{
                 background:purple;
                 text-align: center;
                 height: 70px;
-                width: 100%;
-                margin: 0;
+                padding: 1.5em 0;
+            }
+            .row{
+                margin-right: 0;
+                margin-left: 0;
             }
 
-            @media screen and (min-width:768px) {
-                /*aqui inician los estilos de tablet*/
-                section{  
-                    display: flex;  
-                }
-                
-                nav{
-                    width:200px;
-                    min-width:100px;
-                }
-                .contenedor{
-                   flex: 1;
-                    }
-                 /*aqui terminan los estilos de tablet*/
-            }
-                
              @media screen and (min-width:1024px) {
                 /*aqui inician los estilos de laptop*/
-                 nav{
-                    width: 300px;
-                       }
+                 
                  h1 {
                          font-size: 48px;
                      }
@@ -88,19 +70,19 @@
         </style>
     </head>
 <header>
-    <h1> Layout con flexbox</h1>
+    <h1> Layout con flexbox Grid</h1>
     </header>
-    <section>
-        <nav> 
-            <ul>
+    <section class="row">
+        <nav class="col-xs-12 col-sm-4 col-md-3"> 
+            <ul class="box">
             <li> Inicio </li>
               <li> Nosotros </li>
               <li> Servicios </li>
               <li> Contacto </li>
             </ul>
         </nav>
-        <div class="contenedor">
-           <article>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+           <article class="box">
                <h2>Articulo 1</h2>
                <p>1914 translation by H. Rackham
 "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
