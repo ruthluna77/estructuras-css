@@ -3,7 +3,7 @@
 
     <head> 
         <meta charset="UTF-8">
-        <title> flexbox </title>
+        <title>Layout con Css Grid </title>
        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
             <meta name="viewport" content="width=device-width">
         <style>
@@ -61,24 +61,18 @@
             @media screen and (min-width:768px) {
                 /*aqui inician los estilos de tablet*/
                 section{  
-                    display: flex;  
+                    display: grid;  
+                    grid-template: 1fr / 200px 1fr;
                 }
-                
-                nav{
-                    width:200px;
-                    min-width:100px;
-                }
-                .contenedor{
-                   flex: 1;
-                    }
+               
                  /*aqui terminan los estilos de tablet*/
             }
                 
              @media screen and (min-width:1024px) {
                 /*aqui inician los estilos de laptop*/
-                 nav{
-                    width: 300px;
-                       }
+                 section{    
+                    grid-template: 1fr / 300px 1fr;
+                }
                  h1 {
                          font-size: 48px;
                      }
@@ -88,7 +82,7 @@
         </style>
     </head>
 <header>
-    <h1> Layout con flexbox</h1>
+    <h1>Layout con Css Grid</h1>
     </header>
     <section>
         <nav> 
